@@ -9,11 +9,13 @@
 <script>
 function myMap() {
   var mapCanvas = document.getElementById("map");
-  var mapOptions = {
-    center: new google.maps.LatLng(56, 37.7), 
-    zoom: 10
-  }
+  var myCenter = new google.maps.LatLng(55.742, 37.609);
+  var mapOptions = {center: myCenter, zoom: 15}
   var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter,
+  	icon: "/static/icon_32.png"
+  });
+  marker.setMap(map);
 }
 </script>
 
